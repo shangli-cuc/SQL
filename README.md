@@ -1,10 +1,6 @@
-# SQL
+## example实例数据库的构建和数据插入
 
-# example实例数据库的构建和数据插入
-
-## 用到的内容：
-
-### 数据库常见的增删查改
+### 用到的内容：数据库常见的增删查改
 
 ### 具体语句：SELECT、INSERT INTO、DELECT、UPDATE
 
@@ -62,10 +58,6 @@ FROM  score GROUP BY student_id;
 经常需要从多个数据表中读取数据
 JOIN在两个或多个表中查询数据
 可以在SELECT,UPDATE和DELETE中使用JOIN来联合多表查询
-JOIN 按照功能大致分为如下三类：
-    INNER JOIN（内连接,或等值连接）：获取两个表中字段匹配关系的记录；
-    LEFT JOIN（左连接）：获取左表所有记录，即使右表没有对应匹配的记录；
-    RIGHT JOIN（右连接）：与LEFT JOIN相反，用于获取右表所有记录，即使左表没有对应匹配的记录
 
 使用INNER JOIN(也可以省略INNER使用JOIN，效果一样)
 连接多张表来读取major表中所有major_id字段在student表中对应的major_id字段值
@@ -75,8 +67,4 @@ select student.student_id,student.name,major.major_name,institution.institution_
 from major join student on student.major_id=major.major_id
 join institution on major.institution_id=institution.institution_id;
 
-
-RIGHT JOIN会读取右边数据表的全部数据，即便左边边表无对应数据
-SELECT a.runoob_author, b.runoob_count FROM runoob_tbl a RIGHT JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
-该语句会读取右边的数据表 tcount_tbl 的所有选取的字段数据，即便在左侧表 runoob_tbl 中没有对应的runoob_author 字段值。
 
